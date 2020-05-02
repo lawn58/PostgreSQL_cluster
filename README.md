@@ -11,7 +11,7 @@
                                     postgres=# create database test;
                                     CREATE DATABASE
                                     postgres=# \l
-                                  List of databases
+                                    List of databases
                                       Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
                                     -----------+----------+----------+-------------+-------------+-----------------------
                                     postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
@@ -30,7 +30,7 @@
                                     Type "help" for help.
 
                                     postgres=# \l
-                                  List of databases
+                                    List of databases
                                       Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
                                     -----------+----------+----------+-------------+-------------+-----------------------
                                     postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
@@ -49,7 +49,7 @@
                                     Type "help" for help.
 
                                     postgres=# \l
-                                  List of databases
+                                    List of databases
                                        Name    |  Owner   | Encoding |   Collate   |    Ctype    |   Access privileges   
                                     -----------+----------+----------+-------------+-------------+-----------------------
                                      postgres  | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
@@ -59,7 +59,7 @@
                                                |          |          |             |             | postgres=CTc/postgres
                                      test      | postgres | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
                                     (4 rows)
-                                    Проверка automatic failover:
+Проверка automatic failover:
 
                                     [root@pg1 vagrant]# patronictl list otus
                                     +---------+--------+--------------+--------+---------+----+-----------+
@@ -77,7 +77,7 @@
                                     |   otus  |  pg2   | 192.168.1.22 | Leader | running |  2 |           |
                                     |   otus  |  pg3   | 192.168.1.23 |        | running |  2 |       0.0 |
                                     +---------+--------+--------------+--------+---------+----+-----------+
-                                    Проверка switchover:
+Проверка switchover:
 
                                     [root@pg1 vagrant]#  patronictl list otus
                                     +---------+--------+--------------+--------+---------+----+-----------+
@@ -106,7 +106,7 @@
                                     |   otus  |  pg2   | 192.168.1.22 |        | stopped |    |   unknown |
                                     |   otus  |  pg3   | 192.168.1.23 |        | running |  2 |       0.0 |
                                     +---------+--------+--------------+--------+---------+----+-----------+
-                                    Проверка (Поменять конфигурацию PostgreSQL + с параметром требующим перезагрузки)
+Проверка (Поменять конфигурацию PostgreSQL + с параметром требующим перезагрузки)
 
                                     [root@pg1 vagrant]# patronictl edit-config otus
                                     --- 
